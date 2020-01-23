@@ -9,6 +9,7 @@ across a breaking change.
 The following guides (in alphabetical order) are
 available:
 
+* [Element subclasses must call super in forgetChild]
 * [Generic type of ParentDataWidget changed to ParentData]
 * [ImageCache large images]
 * [Nullable `CupertinoTheme.brightness`]
@@ -18,6 +19,7 @@ available:
 * [ThemeData's accent properties]
 
 [breaking change policy]: /docs/resources/compatibility
+[Element subclasses must call super in forgetChild]: /docs/release/breaking-changes/forgetchild-call-super
 [Generic type of ParentDataWidget changed to ParentData]: /docs/release/breaking-changes/parent-data-widget-generic-type
 [ImageCache large images]: /docs/release/breaking-changes/imagecache-large-images
 [Nullable `CupertinoTheme.brightness`]: /docs/release/breaking-changes/nullable-cupertinothemedata-brightness
