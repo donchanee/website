@@ -35,21 +35,19 @@ void main() {
 }
 ```
 
-`runApp()` 함수는 주어진 [`Widget`][]을 사용하여 결과물을 위젯 트리의 루트로 만든다. 이 예제에서, 위젯 트리는 [`Center`][] 위젯과 그 하위 위젯인 [`Text`][] 위젯의 두 가지 위젯으로 구성된다. 프레임워크는 루트 위젯이 화면을 꽉 채우도록 강제하는데, 이는 "Hello, world"라는 텍스트가 결국에는 화면 중심에 위치하게 된다는 것을 의미한다. 다음의 경우에는 텍스트 방향을 지정해야 한다; `MaterialApp` 위젯을 사용할 때, 추후에 나올 이 방법은 여러분을 위해 필요하다.
+`runApp()` 함수는 주어진 [`Widget`][]을 사용하여 결과물을 위젯 트리의 루트로 만듭니다. 이 예제에서, 위젯 트리는 [`Center`][] 위젯과 그 하위 위젯인 [`Text`][] 위젯의 두 가지 위젯으로 구성됩니다. 프레임워크는 루트 위젯이 화면을 꽉 채우도록 강제하는데, 이는 "Hello, world"라는 텍스트가 결국에는 화면 중심에 위치하게 된다는 것을 의미합니다. 다음의 경우에는 텍스트 방향을 지정해야 합니다; `MaterialApp` 위젯을 사용할 때, 추후에 나올 이 방법은 여러분을 위해 필요합니다.
 
 
 앱을 만들 때 일반적으로 위젯이 어떤 상태를 관리하는지 여부에 따라 [`StatelessWidget`][] 인지 [`StatefulWidget`][] 인지 둘 중 하나를 새로 만들 위젯에 결정해야합니다.
-위젯의 주요 기능은 다른 하위 레벨 위젯의 관점에서 위젯을 표현하는 [`build()`][] 기능을 구현하는 것이다. 이 프레임워크는 프로세스가 기본 [`RenderObject`][]를 나타내는 위젯에서 바닥을 드러낼 때까지 위젯을 차례로 구축하며, 위젯의 형상을 계산하고 화면에 표시한다.
+위젯의 주요 기능은 다른 하위 레벨 위젯의 관점에서 위젯을 표현하는 [`build()`][] 기능을 구현하는 것입니다. 이 프레임워크는 프로세스가 기본 [`RenderObject`][]를 나타내는 위젯에서 바닥을 드러낼 때까지 위젯을 차례로 구축하며, 위젯의 형상을 계산하고 화면에 표시합니다.
 
 
 ## Basic widgets
 
-Flutter comes with a suite of powerful basic widgets,
-of which the following are commonly used:
+플루터는 강력한 기본 위젯이 함께 제공되며, 그 중 일반적으로 사용되는 것은 다음과 같습니다:
 
 **[`Text`][]**
-: The `Text` widget lets you create a run of styled text
-  within your application.
+: 텍스트 위젯을 사용하면 응용 프로그램 내에서 스타일 텍스트를 생성하고 실행할 수 있습니다.
 
 **[`Row`][], [`Column`][]**
 : These flex widgets let you create flexible layouts in
