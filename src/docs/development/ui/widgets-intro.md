@@ -1,29 +1,24 @@
 ---
-title: Introduction to widgets
+title: 위젯 소개
 ---
 
 {% assign api = site.api | append: '/flutter' -%}
 
-Flutter widgets are built using a modern framework that takes
-inspiration from [React][]. The central idea is that you build
-your UI out of widgets. Widgets describe what their view
-should look like given their current configuration and state.
-When a widget's state changes, the widget rebuilds its description,
-which the framework diffs against the previous description in order
-to determine the minimal changes needed in the underlying render
-tree to transition from one state to the next.
+플러터 위젯은 리액트[React][]에 영감을 받아 만들어진 모던 프레임워크입니다.
+플러터의 중심 아이디어는 위젯으로 UI를 구축한다는 것입니다.
+위젯은 현재 어플의 구성 및 상태에 따라 어플의 화면이 어떻게 생겼는지 설명합니다.
+위젯의 상태가 변경되면 위젯이 화면을 재구성하는데,
+이것은 프레임워크가 어떤 상태에서 다음 상태로 전환하기 위해 기본 렌더 트리에서 필요한 최소한의
+변경 사항을 바꿔주기 위해 달라지는 것과 같습니다.
 
 {{site.alert.note}}
-  If you would like to become better acquainted with Flutter by diving
-  into some code, check out the [basic layout codelab][],
-  [building layouts][],
-  and [adding interactivity to your Flutter app][].
+  몇 가지 코드를 입력하여 플루터에 대해 더 잘 알고 싶다면 
+  [basic layout codelab][], [building layouts][] 및 [adding interactivity to your Flutter app][]를 참고하십시오.
 {{site.alert.end}}
 
 ## Hello world
 
-The minimal Flutter app simply calls the [`runApp()`][]
-function with a widget:
+미니멀한 플러터 앱은 단순히 아래의 위젯을 사용하여 [`runApp()`][] 함수를 호출한다:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -40,24 +35,12 @@ void main() {
 }
 ```
 
-The `runApp()` function takes the given
-[`Widget`][] and makes it the root of the widget tree.
-In this example, the widget tree consists of two widgets,
-the [`Center`][] widget and its child, the [`Text`][] widget.
-The framework forces the root widget to cover the screen,
-which means the text "Hello, world" ends up centered on screen.
-The text direction needs to be specified in this instance;
-when the `MaterialApp` widget is used,
-this is taken care of for you, as demonstrated later.
+`runApp()` 함수는 주어진 [`Widget`][]을 사용하여 결과물을 위젯 트리의 루트로 만든다. 이 예제에서, 위젯 트리는 [`Center`][] 위젯과 그 하위 위젯인 [`Text`][] 위젯의 두 가지 위젯으로 구성된다. 프레임워크는 루트 위젯이 화면을 꽉 채우도록 강제하는데, 이는 "Hello, world"라는 텍스트가 결국에는 화면 중심에 위치하게 된다는 것을 의미한다. 다음의 경우에는 텍스트 방향을 지정해야 한다; `MaterialApp` 위젯을 사용할 때, 추후에 나올 이 방법은 여러분을 위해 필요하다.
 
-When writing an app, you'll commonly author new widgets that
-are subclasses of either [`StatelessWidget`][] or [`StatefulWidget`][],
-depending on whether your widget manages any state.
-A widget's main job is to implement a [`build()`][] function,
-which describes the widget in terms of other, lower-level widgets.
-The framework builds those widgets in turn until the process
-bottoms out in widgets that represent the underlying [`RenderObject`][],
-which computes and describes the geometry of the widget.
+
+앱을 만들 때 일반적으로 위젯이 어떤 상태를 관리하는지 여부에 따라 [`StatelessWidget`][] 인지 [`StatefulWidget`][] 인지 둘 중 하나를 새로 만들 위젯에 결정해야합니다.
+위젯의 주요 기능은 다른 하위 레벨 위젯의 관점에서 위젯을 표현하는 [`build()`][] 기능을 구현하는 것이다. 이 프레임워크는 프로세스가 기본 [`RenderObject`][]를 나타내는 위젯에서 바닥을 드러낼 때까지 위젯을 차례로 구축하며, 위젯의 형상을 계산하고 화면에 표시한다.
+
 
 ## Basic widgets
 
